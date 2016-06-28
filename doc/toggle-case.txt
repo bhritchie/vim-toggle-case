@@ -1,7 +1,8 @@
 *toggle-case.vim* - Cycle between standard variable case formats
 
-Author:  Brendan Ritchie <https://github.com/bhritchie>
-License: MIT (http://opensource.org/licenses/MIT)
+Author:      Brendan Ritchie <https://github.com/bhritchie>
+License:     MIT (http://opensource.org/licenses/MIT)
+Repository:  <https://github.com/bhritchie/vim-toggle-case>
 
 A single command is provided by this plugin:
 

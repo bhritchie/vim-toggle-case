@@ -27,11 +27,11 @@ A help file containing this information can be brought up in Vim with `:help tog
 
 ## Installation
 
-With [Pathogen](https://github.com/tpope/vim-pathogen): `cd ~/.vim/bundle && git clone git://github.com/bhritchie/toggle-case.git`.
+With [Pathogen](https://github.com/tpope/vim-pathogen): `cd ~/.vim/bundle && git clone git://github.com/bhritchie/vim-toggle-case.git`.
 
 With [Vundle](https://github.com/gmarik/Vundle.vim): add `Plugin 'bhritchie/toggle-case'` to the list of Vundle plugins in your `.vimrc` and run `:PluginInstall`.
 
-Once installed, the plugin can be disabled by adding the follwing line to your `.vimrc` and restarting Vim:
+Once installed, the plugin can be disabled by adding the following line to your `.vimrc` and restarting Vim:
 
 	let g:loaded_toggle_case = 1
 
