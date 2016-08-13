@@ -1,7 +1,5 @@
 # toggle-case.vim
 
-***THIS PLUGIN IS NOT YET COMPLETE***
-
 Cycle between standard variable case formats with a single command.
 
 ## Usage
@@ -17,7 +15,7 @@ This command toggles the case of the variable under the cursor, cycling between:
 - `snake_case`, and
 - `ALL_CAPS_SNAKE_CASE`
 
-For single-word variables, snake-case is left out of the cycle, since it would be the same as camel-case. Leading underscores are always ignored.
+For single-word variables, the rotation is simply between all lower case, all upper case, and capitalized. Leading underscores are always ignored.
 
 By default `:ToggleCase` is bound to `<leader>tt`. You can override this by defining your own mapping with a line such as this in your `.vimrc`:
 
@@ -33,7 +31,7 @@ With [Vundle](https://github.com/gmarik/Vundle.vim): add `Plugin 'bhritchie/togg
 
 Once installed, the plugin can be disabled by adding the following line to your `.vimrc` and restarting Vim:
 
-	let g:loaded_toggle_case = 1
+    let g:loaded_toggle_case = 1
 
 ## License
 

@@ -2,16 +2,15 @@
 " Maintainer: Brendan Ritchie <https://github.com/bhritchie>
 " Version:    0.1.0
 
-" ANTIDISESTABLISHMENTARIANISM
-" thisIsMultipleWords
+" antidisestablishmentarianism
+" ThisIsMultipleWords
 
 " if exists("g:loaded_toggle_case") || &compatible || v:version < 700
 "     finish
 " endif
 
 function! s:transform(str)
-    echo a:str
-    if a:str =~# '\v\C^[_]*[a-z]*$' " lower
+    if a:str =~# '\v\C^[_]*[a-z]*$' " lowercase
         return substitute(
                     \ a:str,
                     \ '\v\C^([_]*)([a-z])(.*)$',
@@ -19,12 +18,10 @@ function! s:transform(str)
                     \ 'g'
                     \ )
     elseif a:str =~# '\v\C^[_]*[A-Z][a-z]*$' " Capitalized
-        echo "matcch here"
         return toupper(a:str)
-    elseif a:str =~# '\v\C^[_]*[A-Z]*$' " UPPER
+    elseif a:str =~# '\v\C^[_]*[A-Z]*$' " ALLCAPS
         return tolower(a:str)
-    elseif a:str =~# '\v\C^[_]*[a-z]\+([A-Z][a-z]*)*$' " camelCase
-        echo "matched camelCase"
+    elseif a:str =~# '\v\C^[_]*[a-z]+([A-Z][a-z]*)*$' " camelCase
         return substitute(
                     \ a:str,
                     \ '\v\C^([_]*)([a-z])',
@@ -32,7 +29,6 @@ function! s:transform(str)
                     \ ''
                     \ )
     elseif a:str =~# '\v\C^[_]*([A-Z][a-z]*)*$' " CamelCaseWithInitialCapital
-        echo "matced InitialCamelCase"
         return tolower(substitute(
                     \ a:str,
                     \ '\v\C([a-z])([A-Z])',
